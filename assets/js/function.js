@@ -9,7 +9,10 @@ $("input[type='text']").on('keypress', function(event){
 });
 //display check or uncheck
 //marcar completo e incompleto
-if(window.matchMedia("(min-width: 700px)")){
+function isTouchDevice() {
+    return 'ontouchstart' in document.documentElement;
+}
+if (!isTouchDevice()) {
     $('ul').on('click', 'li', function(){
         $(this).toggleClass('completado');
     });
