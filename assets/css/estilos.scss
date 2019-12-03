@@ -100,3 +100,54 @@ body{
     text-decoration: line-through;
     color: #a5a5a5;
 }
+
+@media screen and (max-width:800px){
+    body{
+        .contenedor{
+            width: 80%;
+            margin: 10px auto;
+            .title{
+                padding: 10px;
+                h1{
+                    letter-spacing: 4px;
+                    font-size: 30px;
+                }
+                #toggleInput{
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+            input{
+                padding: 10px 15px;
+            }
+            ul{
+                li{
+                    p{
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    body{
+        .contenedor{
+            width: 90%;
+            margin: 10px auto;
+            .title{
+                padding: 10px;
+                h1{
+                    letter-spacing: 4px;
+                    font-size: 20px;
+                }
+                #toggleInput{
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
