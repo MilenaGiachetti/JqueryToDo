@@ -9,9 +9,11 @@ $("input[type='text']").on('keypress', function(event){
 });
 //display check or uncheck
 //marcar completo e incompleto
-$('ul').on('click', 'li', function(){
-    $(this).toggleClass('completado');
-});
+if(window.matchMedia("(min-width: 700px)")){
+    $('ul').on('click', 'li', function(){
+        $(this).toggleClass('completado');
+    });
+}
 $('ul').on('click','.check', function(event){
     $(this).parent("li").addClass('completado');
     event.stopPropagation();
