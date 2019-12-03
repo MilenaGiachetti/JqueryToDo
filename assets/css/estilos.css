@@ -53,17 +53,33 @@ body .contenedor .title h1 {
   font-size: 40px;
 }
 
-body .contenedor .title i {
-  font-size: 25px;
+body .contenedor .title #toggleInput i {
+  font-size: 23px;
 }
 
 body .contenedor input {
   width: 100%;
-  padding: 15px;
+  padding: 15px 20px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   border: 2px solid rgba(240, 84, 79, 0);
-  background: #f7f7f7;
+  background: #BEE0D5;
+}
+
+body .contenedor input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+body .contenedor input:-ms-input-placeholder {
+  color: #fff;
+}
+
+body .contenedor input::-ms-input-placeholder {
+  color: #fff;
+}
+
+body .contenedor input::placeholder {
+  color: #fff;
 }
 
 body .contenedor input:focus {
@@ -75,9 +91,9 @@ body .contenedor ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -114,7 +130,7 @@ body .contenedor ul li .trash {
 }
 
 body .contenedor ul li .check {
-  background: #93D89B;
+  background: #BEE0D5;
 }
 
 body .contenedor ul li .uncheck {
@@ -123,6 +139,7 @@ body .contenedor ul li .uncheck {
 
 body .contenedor ul li p {
   padding: 0 20px;
+  margin-right: auto;
 }
 
 .completado {

@@ -2,7 +2,7 @@
 $("input[type='text']").on('keypress', function(event){ 
     if (event.which === 13) {
         var texto = $("input[type='text']").val()
-        $('ul').append('<li><span class="trash btn hidden"><i class="fas fa-trash-alt"></i></span><span class="check btn hidden"><i class="fas fa-check"></i></span><span class="uncheck btn hidden"><i class="fas fa-times"></i></span><p>'+texto+'</p></li>'
+        $('ul').append('<li><p>'+texto+'</p><span class="trash btn hidden"><i class="fas fa-trash-alt"></i></span><span class="check btn hidden"><i class="fas fa-check"></i></span><span class="uncheck btn hidden"><i class="fas fa-times"></i></span></li>'
         );
         $("input[type='text']").val('');
     }
@@ -27,8 +27,12 @@ $('ul').on('click', '.trash', function(event){
     });
     event.stopPropagation();
 });
-$('.fa-plus').on('click',  function(event){
-    $("input[type='text']").fadeToggle(300);
+$('#toggleInput').on('click', '.fa-plus', function(event){
+    $("input[type='text']").fadeIn(300);
+    $('#toggleInput').html('<i class="fas fa-minus"></i>')
+});
+$('#toggleInput').on('click','.fa-minus', function(event){
+    $("input[type='text']").fadeOut(300);
+    $('#toggleInput').html('<i class="fas fa-plus"></i>')
 });
 
-fa-plus

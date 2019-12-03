@@ -32,17 +32,22 @@ body{
                 letter-spacing: 8px;
                 font-size: 40px;
             }
-            i{
-                font-size: 25px;
+            #toggleInput{
+                i{
+                    font-size: 23px;
+                }
             }
         }
         input{
             width: 100%;
-            padding: 15px;
+            padding: 15px 20px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             border: 2px solid rgba(240, 84, 79, 0);
-            background: #f7f7f7;
+            background: #BEE0D5;
+            &::placeholder{
+                color: #fff;
+            }
             &:focus{
                 border: 2px solid #F0544F;
                 background: #fff;
@@ -52,7 +57,7 @@ body{
         ul{
             li{
                 display: flex;
-                justify-content: flex-start;
+                justify-content: flex-end;
                 flex-direction: row;
                 align-items: center;
                 height: 40px;
@@ -77,13 +82,14 @@ body{
                     background: #F0544F;
                 }
                 .check{
-                    background: #93D89B;
+                    background: #BEE0D5;
                 }
                 .uncheck{
                     background: #EF8581;
                 }
                 p{
                     padding: 0 20px;
+                    margin-right: auto;
                 }
             }
         }
