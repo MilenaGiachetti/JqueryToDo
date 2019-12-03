@@ -1,0 +1,96 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+@font-face{
+    font-family: "Komoda";
+    src: "assets/css/fonts/Komoda.otf";
+}
+body{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    .contenedor{
+        width: 50%;
+        margin: 50px auto;
+        background: #f7f7f7;
+        box-shadow: 5px 5px 10px rgba(240, 84, 79, 0.1);
+        .title{
+            padding: 20px;
+            background: #F0544F;
+            color: #f2f2f2;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                font-family: "Komoda";
+                letter-spacing: 8px;
+                font-size: 40px;
+            }
+            i{
+                font-size: 25px;
+            }
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            border: 2px solid rgba(240, 84, 79, 0);
+            background: #f7f7f7;
+            &:focus{
+                border: 2px solid #F0544F;
+                background: #fff;
+            }
+
+        }
+        ul{
+            li{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
+                height: 40px;
+                background: #fff;
+                &:nth-child(2n){
+                    background: #f7f7f7;
+                }
+                &:hover .btn{
+                    opacity: 1;
+                    width: 40px;
+                }
+                .btn{
+                    transition: 0.2s linear;
+                    opacity: 0;
+                    height: 100%;
+                    width: 0px;
+                    text-align: center;
+                    line-height: 40px;
+                    color: #f2f2f2;
+                }
+                .trash{
+                    background: #F0544F;
+                }
+                .check{
+                    background: #93D89B;
+                }
+                .uncheck{
+                    background: #EF8581;
+                }
+                p{
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+.completado{
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
