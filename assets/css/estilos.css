@@ -147,6 +147,10 @@ body .contenedor ul li p {
   color: #a5a5a5;
 }
 
+.checkuncheck {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   body .contenedor {
     width: 80%;

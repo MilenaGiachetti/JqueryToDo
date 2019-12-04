@@ -7,6 +7,7 @@ $("input[type='text']").on('keypress', function(event){
         $("input[type='text']").val('');
     }
 });
+$('.uncheck').toggleClass('checkuncheck');
 //display check or uncheck
 //marcar completo e incompleto
 function isTouchDevice() {
@@ -15,14 +16,20 @@ function isTouchDevice() {
 if (!isTouchDevice()) {
     $('ul').on('click', 'li', function(){
         $(this).toggleClass('completado');
+        $(this).children('.check').toggleClass('checkuncheck');
+        $(this).children('.uncheck').toggleClass('checkuncheck');    
     });
 }
 $('ul').on('click','.check', function(event){
     $(this).parent("li").addClass('completado');
+    $(this).addClass('checkuncheck');
+    $(this).siblings('.uncheck').removeClass('checkuncheck');    
     event.stopPropagation();
 });
 $('ul').on('click', '.uncheck', function(event){
     $(this).parent("li").removeClass('completado');
+    $(this).addClass('checkuncheck');
+    $(this).siblings('.check').removeClass('checkuncheck');    
     event.stopPropagation();
 });
 //eliminar list items
@@ -40,4 +47,4 @@ $('#toggleInput').on('click','.fa-minus', function(event){
     $("input[type='text']").fadeOut(300);
     $('#toggleInput').html('<i class="fas fa-plus"></i>')
 });
-
+//cambiar entre check y uncheck en cada li
