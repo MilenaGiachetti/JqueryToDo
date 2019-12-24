@@ -2,7 +2,7 @@
 $("input[type='text']").on('keypress', function(event){ 
     if (event.which === 13) {
         var texto = $("input[type='text']").val()
-        $('ul').append('<li><p>'+texto+'</p><span class="trash btn hidden"><i class="fas fa-trash-alt"></i></span><span class="check btn hidden"><i class="fas fa-check"></i></span><span class="uncheck btn hidden"><i class="fas fa-times"></i></span></li>'
+        $('ul').append('<li><p>'+texto+'</p><span class="trash btn"><i class="fas fa-trash-alt"></i></span><span class="check btn"><i class="fas fa-check"></i></span><span class="uncheck btn"><i class="fas fa-times"></i></span></li>'
         );
         $("input[type='text']").val('');
     }
