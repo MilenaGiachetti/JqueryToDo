@@ -7,7 +7,7 @@ $("input[type='text']").on('keypress', function(event){
         $("input[type='text']").val('');
     }
 });
-$('.uncheck').toggleClass('checkuncheck');
+$('.uncheck').toggleClass('hidden');
 //display check or uncheck
 //marcar completo e incompleto
 function isTouchDevice() {
@@ -16,20 +16,20 @@ function isTouchDevice() {
 if (!isTouchDevice()) {
     $('ul').on('click', 'li', function(){
         $(this).toggleClass('completado');
-        $(this).children('.check').toggleClass('checkuncheck');
-        $(this).children('.uncheck').toggleClass('checkuncheck');    
+        $(this).children('.check').toggleClass('hidden');
+        $(this).children('.uncheck').toggleClass('hidden');    
     });
 }
 $('ul').on('click','.check', function(event){
     $(this).parent("li").addClass('completado');
-    $(this).addClass('checkuncheck');
-    $(this).siblings('.uncheck').removeClass('checkuncheck');    
+    $(this).addClass('hidden');
+    $(this).siblings('.uncheck').removeClass('hidden');    
     event.stopPropagation();
 });
 $('ul').on('click', '.uncheck', function(event){
     $(this).parent("li").removeClass('completado');
-    $(this).addClass('checkuncheck');
-    $(this).siblings('.check').removeClass('checkuncheck');    
+    $(this).addClass('hidden');
+    $(this).siblings('.check').removeClass('hidden');    
     event.stopPropagation();
 });
 //eliminar list items
