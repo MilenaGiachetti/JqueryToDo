@@ -105,10 +105,6 @@ body .contenedor ul li {
   background: #fff;
 }
 
-body .contenedor ul li:nth-child(2n) {
-  background: #f7f7f7;
-}
-
 body .contenedor ul li:hover .btn {
   opacity: 1;
   width: 40px;
@@ -127,6 +123,7 @@ body .contenedor ul li .btn {
 
 body .contenedor ul li .trash {
   background: #F0544F;
+  display: block;
 }
 
 body .contenedor ul li .check {
@@ -145,5 +142,10 @@ body .contenedor ul li p {
 .completado {
   text-decoration: line-through;
   color: #a5a5a5;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
 }
 /*# sourceMappingURL=estilos.css.map */
