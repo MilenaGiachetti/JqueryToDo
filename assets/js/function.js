@@ -1,4 +1,4 @@
-if(localStorage.listItems !== ''){
+if(localStorage.listItems !== null && localStorage.listItems !== undefined){
     var localItems = new Array;
     localItems = JSON.parse(localStorage.getItem('listItems'));
     console.log(localItems);
